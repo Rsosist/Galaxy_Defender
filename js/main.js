@@ -590,7 +590,14 @@ function drawStartScreen() {
   ctx.font = "20px Orbitron, sans-serif";
   ctx.fillStyle = COLORS.text;
   ctx.textAlign = "center";
-  ctx.fillText("Press SPACE to Start", canvas.width / 2, canvas.height / 2);
+  const centerX = canvas.width / 2;
+  let y = canvas.height / 2;
+  ctx.fillText("Press SPACE to Start", centerX, y);
+  y += 40;
+  ctx.font = "16px Orbitron, sans-serif";
+  ctx.fillText("Z : 사격", centerX, y);
+  y += 25;
+  ctx.fillText("X : 폭탄", centerX, y);
 }
 
 drawStartScreen();
